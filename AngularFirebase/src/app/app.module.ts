@@ -3,13 +3,14 @@ import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 
-import { AppComponent } from './app.component';
-import { UsersComponent } from './users.component';
-import { UserFormComponent } from './user-form.component';
-
 // Firebase
 import { AngularFireModule } from 'angularfire2';
 import { AngularFirestoreModule } from 'angularfire2/firestore';
+import { AngularFireAuthModule } from 'angularfire2/auth';
+
+import { AppComponent } from './app.component';
+import { UsersComponent } from './users.component';
+import { UserFormComponent } from './user-form.component';
 
 // Initialize Firebase
 var config = {
@@ -31,6 +32,7 @@ var config = {
     BrowserModule,
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
+    AngularFireAuthModule,
     ReactiveFormsModule,
     routing
   ],
