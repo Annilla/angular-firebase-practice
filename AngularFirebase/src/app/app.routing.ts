@@ -7,4 +7,5 @@ import { UserFormComponent } from './user-form.component';
 export const routing = RouterModule.forRoot([
   { path: '', component: UsersComponent },
   { path: 'add', component: UserFormComponent },
+  { path: 'edit/:id', component: UserFormComponent },
 ])

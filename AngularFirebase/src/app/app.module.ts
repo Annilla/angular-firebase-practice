@@ -1,9 +1,11 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
+import { ReactiveFormsModule } from '@angular/forms';
 import { routing } from './app.routing';
 
 import { AppComponent } from './app.component';
 import { UsersComponent } from './users.component';
+import { UserFormComponent } from './user-form.component';
 
 // Firebase
 import { AngularFireModule } from 'angularfire2';
@@ -22,12 +24,14 @@ var config = {
 @NgModule({
   declarations: [
     AppComponent,
-    UsersComponent
+    UsersComponent,
+    UserFormComponent
   ],
   imports: [
     BrowserModule,
     AngularFireModule.initializeApp(config),
     AngularFirestoreModule,
+    ReactiveFormsModule,
     routing
   ],
   providers: [],

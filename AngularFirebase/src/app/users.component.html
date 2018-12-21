@@ -12,15 +12,15 @@
   </thead>
   <tbody>
     <tr *ngFor="let user of users | async">
-      <td>{{ user.name }}</td>
-      <td>{{ user.email }}</td>
+      <td>{{ user.data.name }}</td>
+      <td>{{ user.data.email }}</td>
       <td>
-        <a>
+        <a [routerLink]="['/edit', user.id]">
           <i class="glyphicon glyphicon-edit"></i>
         </a>
       </td>
       <td>
-        <a>
+        <a (click)="delete(user.id, user.data.name)">
           <i class="glyphicon glyphicon-remove"></i>
         </a>
       </td>
